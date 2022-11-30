@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Etiquetas HTML  </title>
+<style>
+#listado {
+  width: 1000px;
+  height:600px ;
+
+}
+
+
+
+#listado div {
+
+  box-sizing: content-box;  
+  box-shadow: inset;
+  width: 950px;
+  height: 500px;
+  border: 15px solid rgb(35, 93, 158);
+ float:left;
+ display: none;
+ margin-left: 120px;
+ margin-top: -300px;
+ overflow: hidden;
+ overflow-y: scroll;
+ border-radius: 40px;
+ background-color: rgb(204, 199, 199);
+
+ align-content: center;
+}
+#b1{
+  float: left;
+  width: 100px;
+  height: 50px;
+  margin-top: 250px;
+  background-color: rgb(199, 204, 209);
+  color: black;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-shadow: 10px;
+  font-weight: bold;
+  font-size: 25px;
+}
+#b2{
+  float:right;
+  width: 100px;
+  height: 50px;
+  margin-top: -340px;
+  margin-right: 11px;
+  background-color: rgb(199, 204, 209);
+  text-shadow: 10px;
+  font-weight: bold;
+  font-size: 25px;
+
+}
+
+h1{
+text-align: center;  
+font-size: 1cm;
+}
+
+body{
+  background-color: rgb(4, 14, 59);
+}
+
+h2{
+  text-align: center;
+}
+p{
+ font-size: 16px;
+ font-family: sans-serif;
+ text-align: justify;
+ margin-left: 10px;
+ margin-right: 10px;
+}
+
+ img{
+  align-items: center;
+  width: 900px;
+  height: 500px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 5px solid rgb(236, 231, 225);
+  border-radius: 10px;
+  
+}
+#t{
+  background-color: aliceblue;
+}
+
+</style>
+<script>
+  var indice = 1;
+  pantalla(indice);
+  
+  function pantalla2(n) {
+    pantalla(indice += n);
+  }
+  
+  function pantalla(n) {
+    var i=0;
+    var x = document.getElementsByClassName("note");
+    if (n > x.length) {indice = 1}
+    if (n < 1) {indice= x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[indice-1].style.display = "block";  
+  }
+  </script>
+
+
+</head>
+<body >
+  <div id="t">
+   <h1>Informaci&oacute;n de Animales en Peligro de Extinci&oacute;n  en Mex&iacute;co.  </h1>
+  </div>
+   <button id="b1" onclick="pantalla2(-1)">&#10094;</button>
+<div id="listado">
+  
+    <div class="note" id="guacamaya"> <h2>Guacamaya Roja</h2>
+      <img src="../HTML/gucamaya_roja.webp">
+       <p>Es una especie propia de América central y Sur,  pertenece a la familia de los Psittacidae. 
+        Habita en los árboles de sabanas, bosques y selvas de poca altitud de México y otros paises como:Colombia, Venezuela,etc.
+        Mide aprox. entre 80 y 100 cm.Su plumaje característico rojo intenso, tonalidades azules y amarillas.
+        Se alimentan de frutos secos, semillas y frutas frescas,pequeños insectos e incluso del néctar de algunas flores.
+        Las guacamayas son aves muy longevas, pueden llegar a vivir entre 30 y 50 años en cautiverio 
+        y una media de 15 o 20 años en libertad.  
+       </p>
+       
+       <br>
+      </div>
+    
+    <div class="note"  id="ocelote"><h2>Ocelote</h2>
+      <img src="../HTML/ocelote.webp">
+            <p>   El ocelote,nombre científico es Leopardus pardalis. Mide aprox. 70 a los 90 centímetros de longitud.
+        Pelaje corto,color pardo en la parte del lomo y blanco e moteado negro. Animal carnívoro, que se alimenta de presas de todo tipo de menor
+         a su tamaño. Una amenaza para este animal son la boa y el águila harpía.
+          </p>
+         
+    </div>
+    <br>
+    <div class="note" id="vaquita"><h2>Vaquita Marina</h2>
+      <img src="../HTML/vaquita.webp">
+      <p>
+        Es un cetáceo ,mamífero marino de pequeño tamaño, pertenece a la familia de las marsopas, 
+        Mide aprox. 150 cm de longitud y peso aprox. 50 kg,  Viven en grupos de 2 o 3 individuos.
+        Amenaza de extincion : contaminacion de agua, cambio climático, pesca ilegal.
+       </p> 
+      
+    </div>
+    <br>
+    <div class="note"  id="ajolote"><h2>Ajolote</h2>
+      <img src="../HTML/ajolote.webp">
+      <p>El ajolote posee caracter&iacute;sticas de la salamandra,mide aproximadamente 23 cent&iacute;metros, 
+        cuerpo gelatinoso, tiene cuatro patas, una cola larga, ojos pequeños y boca grande.
+        Es un animal nativo de los canales de agua y lagos más antiguos de México,
+        concretamente de la zona del lago Xochimilco.
+         Se adapta a los más nuevos, siempre y cuando sean de mucha profundidad y con gran cantidad  de vegetación.
+          </p>
+         
+      </div>
+ <br>
+      <div class="note" id="conejo"> <h2>Conejito de los Volcanes </h2>
+
+        <img src="../HTML/conejo.webp">
+        <p>  La especie Romerolagus diazi es comúnmente conocida como el conejito de los volcanes,
+          teporingo o Zacatuche.Vive en zonas volcánicas como en el Popocatepetl, Iztaccihuatl, etc.
+          Alimentacion de vegetación, Amenazas deforestacion, contaminacion ambiental.
+        </p>
+       
+      </div>
+
+      
+     
+</div>
+<button id="b2" onclick="pantalla2(1)">&#10095;</button>
+</body>
+</html>
